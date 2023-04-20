@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -o output
+gcc program.c -o program
