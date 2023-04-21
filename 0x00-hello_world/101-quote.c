@@ -1,4 +1,5 @@
 #include <unistd.h>
+#define MESSAGE "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
 /**
  * main - Entry point
  *
@@ -6,6 +7,7 @@
  */
 int main(void)
 {
-    fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
-    return (1);
+    ssize_t len = sizeof(MESSAGE) - 1;
+    ssize_t written = write(2, MESSAGE, len);
+    return (written == len) ? 1 : -1;
 }
