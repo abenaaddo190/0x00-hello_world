@@ -11,6 +11,6 @@ int main(void)
     ssize_t written = write(2, MESSAGE, len);
     if(written == len)
     {
-    return(1);
+        return(1);
     }
 }
