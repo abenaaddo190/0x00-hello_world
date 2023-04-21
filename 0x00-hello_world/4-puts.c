@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc program.c -o program
+gcc -Wall -Werror -Wextra -pedantic program.c -o program
