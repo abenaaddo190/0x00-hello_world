@@ -9,5 +9,8 @@ int main(void)
 {
     ssize_t len = sizeof(MESSAGE) - 1;
     ssize_t written = write(2, MESSAGE, len);
-    return (1);
+	if(written == len)
+	{
+	return(1);
+	}
 }
