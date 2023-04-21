@@ -7,6 +7,7 @@
  */
 int main(void)
 {
-    write(STDERR_FILENO, MESSAGE, sizeof(MESSAGE)-1);
-    return 1;
+    ssize_t len = sizeof(MESSAGE) - 1;
+    ssize_t written = write(2, MESSAGE, len);
+    return (1);
 }
