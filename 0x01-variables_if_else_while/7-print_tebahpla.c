@@ -10,18 +10,14 @@
 
 int main(void)
 {
-	char hex = '0';
-
-	while (hex <= '9' || hex <= 'f')
+	char c = 'z';
+	while (c >= 'a')
 	{
-		putchar(hex);
-		hex++;
-		if (hex == ':')
-			hex = 'a';
+		putchar(c);
+		c--;
 	}
-
 	putchar('\n');
-
 	
 	return (0);
+	
 }
