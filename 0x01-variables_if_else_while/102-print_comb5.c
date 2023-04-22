@@ -10,29 +10,36 @@
 
 int main(void)
 {
-	int d, p, q;
+	int num1 = 0;
+	int num2;
 
-	for (d = '0'; d < '9'; d++)
+	while (num1 <= 99)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		num2 = num1;
+
+		while (num2 <= 99)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			if (num1 != num2)
 			{
-				if ((p != d) != q)
+				putchar((num1 / 10) + '0');
+				putchar((num1 % 10) + '0');
+				putchar(' ');
+				putchar((num2 / 10) + '0');
+				putchar((num2 % 10) + '0');
+
+				if (num1 != 98 || num2 != 99)
 				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
-
-					if (d == '7' && p == '8')
-						continue;
-
 					putchar(',');
 					putchar(' ');
 				}
 			}
+
+			num2++;
 		}
+
+		num1++;
 	}
+
 	putchar('\n');
 
 	return (0);
