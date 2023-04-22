@@ -10,19 +10,18 @@
 
 int main(void)
 {
-	char c;
+	char hex = '0';
 
-	for (c = '0'; c <= '9'; c++)
+	while (hex <= '9' || hex <= 'f')
 	{
-		putchar(c);
+		putchar(hex);
+		hex++;
+		if (hex == ':')
+			hex = 'a';
 	}
-	
-	for (c = 'a'; c <= 'f'; c++)
-	{
-		putchar(c);
-	}
-	
+
 	putchar('\n');
+
 	
 	return (0);
 }
