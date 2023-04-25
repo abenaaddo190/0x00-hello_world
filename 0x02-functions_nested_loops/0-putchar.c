@@ -4,15 +4,6 @@
  * main - prints _putchar, followed by a new line
  * Return: 0 if successful
  */
-int _putchar(char c)
-{
-    return (write(1, &c, 1));
-}
-
-/**
- * main - prints _putchar, followed by a new line
- * Return: 0 if successful
- */
 int main(void)
 {
     char s[] = "_putchar\n";
