@@ -4,8 +4,23 @@
  * main - prints _putchar, followed by a new line
  * Return: 0 if successful
  */
+int _putchar(char c)
+{
+    return (write(1, &c, 1));
+}
+
+/**
+ * main - prints _putchar, followed by a new line
+ * Return: 0 if successful
+ */
 int main(void)
 {
-    printf("_putchar\n");
+    char s[] = "_putchar\n";
+    int i;
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        _putchar(s[i]);
+    }
     return (0);
 }
