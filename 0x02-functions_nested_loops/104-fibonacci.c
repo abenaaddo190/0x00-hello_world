@@ -1,33 +1,43 @@
 #include <stdio.h>
 
 /**
- * main - finds and prints the sum of the even-valued terms in the Fibonacci sequence
- * Return: 0 if successful
+ * main - finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by a new line
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-int prev = 1;
-int current = 2;
-int count = 0;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-printf("%d, %d, ", prev, current);
-count += 2;
+	j = 1;
+	k = 2;
 
-while (count < 98)
-{
-	int next = prev + current;
+	printf("%lu", j);
 
-	printf("%d", next);
-
-	if (count < 97)
+	for (i = 1; i < 91; i++)
 	{
-		printf(", ");
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
-	prev = current;
-	current = next;
-	count++;
-}
 
-printf("\n");
-return (0);
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", k1 + (k2 / 1000000000));
+		printf("%lu", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
+	}
+
+	printf("\n");
+
+	return (0);
 }
