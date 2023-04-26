@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* Output
-*/
-
+ * main - finds and prints the sum of the even-valued terms in the Fibonacci sequence
+ * Return: 0 if successful
+ */
 int main(void)
 {
 int prev = 1;
