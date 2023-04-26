@@ -16,8 +16,9 @@ count += 2;
 while (count < 98)
 {
 	int next = prev + current;
+
 	printf("%d", next);
-	
+
 	if (count < 97)
 	{
 		printf(", ");
@@ -29,5 +30,5 @@ while (count < 98)
 
     printf("\n");
 
-    return 0;
+    return (0);
 }
