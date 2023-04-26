@@ -11,7 +11,7 @@ a = 1;
 b = 2;
 sum = 0;
 
-while (a <= sizeof(long))
+while (a <= sizeof(long int))
 {
 	if (a % 2 == 0)
 	{
